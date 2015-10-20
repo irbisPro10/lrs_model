@@ -1,0 +1,8 @@
+Debug/
+Release/
+lrs/Debug/
+lrs/Release/
+ipch/
+lrs.sdf
+lrs.opensdf
+lrs.suo

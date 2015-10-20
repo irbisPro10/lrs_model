@@ -1,0 +1,193 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0303 
+header_name {.h} 
+code_name {.cxx}
+decl {\#include "input_slider.h"} {
+  comment {in header} public global
+} 
+
+decl {\#include "int_input.h"} {
+  comment {in header} public global
+} 
+
+decl {\#include "lrs_view.h"} {
+  comment {in header} public global
+} 
+
+class Main_UI {open
+} {
+  Function {Main_UI()} {open
+  } {
+    Fl_Window main_window {
+      label {Модель РЛС} open
+      private xywh {459 88 708 495} type Double visible
+    } {
+      Fl_Tabs tabs_param {
+        private xywh {435 15 265 475}
+      } {
+        Fl_Group {} {
+          label Option1 open
+          private xywh {435 30 265 460} hide
+        } {
+          Fl_Box {} {
+            label {Координаты точки стояния РЛС в ГСК, гр}
+            private xywh {440 36 250 94} box THIN_UP_BOX labelfont 1 labelsize 12 align 17
+          }
+          Fl_Value_Input {} {
+            label {Географическая долгота:}
+            private xywh {645 51 40 24} maximum 90 step 1 value 90
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Географическая широта:}
+            private xywh {645 76 40 24} maximum 90 step 1 value 65
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Угол поворота оси Z МПСК:}
+            private xywh {645 101 40 24} minimum -360 maximum 360
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Рабочая частота РЛС, МГц:}
+            private xywh {645 135 40 24} labelsize 13 maximum 10000 value 600
+            class Int_input
+          }
+          Fl_Box {} {
+            label {Размеры передающей и приёмной ФАР, м}
+            private xywh {440 163 250 175} box THIN_UP_BOX labelfont 1 labelsize 13 align 145
+          }
+          Fl_Value_Input {} {
+            label {Передающей по горизонтали:}
+            private xywh {645 190 40 24} labelsize 13 minimum 1 maximum 1000 value 20
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Приёмной по горизонтали:}
+            private xywh {645 236 40 24} labelsize 13 minimum 1 maximum 1000 value 40
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Передающей по вертикали:}
+            private xywh {645 213 40 24} labelsize 13 minimum 1 maximum 1000 value 30
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Приёмной по вертикали:}
+            private xywh {645 259 40 24} labelsize 13 value 40
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Угол наклона полотна ФАР, относительно земной поверхности, градусы:}
+            private xywh {645 296 40 24} labelsize 13 align 132 value 70
+            class Int_input
+          }
+          Fl_Box {} {
+            label {Размеры зоны обзора РЛС, градусы}
+            private xywh {440 342 250 138} box THIN_UP_BOX labelfont 1 labelsize 13 align 17
+          }
+          Fl_Value_Input {} {
+            label {Нижняя граница зоны обзора по азимуту:}
+            private xywh {645 362 40 24} labelsize 13 align 132 value -45
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Верхняя граница зоны обзора по азимуту:}
+            private xywh {645 391 40 24} labelsize 13 align 132 value 45
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Нижняя граница обзора по углу места:}
+            private xywh {645 419 40 24} labelsize 13 align 132 value 10
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Верхняя граница зоны обзора по углу мест:}
+            private xywh {645 446 40 24} labelsize 13 align 132 value 60
+            class Int_input
+          }
+        }
+        Fl_Group {} {
+          label Option2 open
+          private xywh {435 30 265 460}
+        } {
+          Fl_Box {} {
+            label {КИП и КАР ФАР}
+            private xywh {440 37 250 113} box THIN_UP_BOX labelfont 1 labelsize 12 align 17
+          }
+          Fl_Value_Input {} {
+            label {КИП передающей ФАР:}
+            private xywh {645 51 40 24} value 0.99 deactivate
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {КАР передающей ФАР:}
+            private xywh {645 75 40 24} value 50 deactivate
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {КИП приёмной ФАР:}
+            private xywh {645 98 40 24} value 0.99 deactivate
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {КАР приёмной ФАР:}
+            private xywh {645 121 40 24} value 50 deactivate
+            class Int_input
+          }
+          Fl_Box {} {
+            label {Параметры для расчета энергетических характеристик РЛС}
+            private xywh {440 157 250 214} box THIN_UP_BOX labelfont 1 labelsize 12 align 145
+          }
+          Fl_Value_Input {} {
+            label {Мощность одного передающего модуля, Вт:}
+            private xywh {645 194 40 24} labelsize 13 align 132 value 600
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Скважность следования импульсов:}
+            private xywh {645 222 40 24} labelsize 13 align 132 value 10
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Количество накапливаемых отражённых от цели импульсов:}
+            private xywh {645 250 40 24} labelsize 13 align 132 value 1
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Вероятность правильного обнаружения:}
+            private xywh {644 279 40 24} labelsize 13 align 132 value 0.95
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {Вероятность ложной тревоги, 10^-6:}
+            private xywh {644 308 40 24} labelsize 13 align 132 value 1
+            class Int_input
+          }
+          Fl_Value_Input {} {
+            label {ЭПР цели, м^2:}
+            private xywh {644 337 40 24} labelsize 13 value 1
+            class Int_input
+          }
+        }
+      }
+      Fl_Box lrs_view {
+        private xywh {15 15 415 445} box UP_BOX
+        class Lrs_view
+      }
+      Fl_Value_Slider eps_slider {
+        label eps
+        callback {lrs_view->redraw();} selected
+        private xywh {15 465 415 25} type Horizontal labelsize 8 align 4 minimum -45 maximum 45 textsize 14
+      }
+    }
+  }
+  Function {show(int argc, char* argv[])} {open return_type void
+  } {
+    code {main_window->show(argc,argv);} {}
+  }
+  Function {eps()} {open return_type float
+  } {
+    code {return eps_slider->value();} {}
+  }
+} 

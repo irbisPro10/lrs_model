@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы исходного кода\fl">
+      <UniqueIdentifier>{32dd0002-7f11-4fdf-b8cf-956796361832}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\junk">
+      <UniqueIdentifier>{46c74798-e657-412f-8cb5-9613a781f04b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mainDlg.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="dlg.cxx">
+      <Filter>Файлы исходного кода\fl</Filter>
+    </ClCompile>
+    <ClCompile Include="int_input.cpp">
+      <Filter>Файлы исходного кода\fl</Filter>
+    </ClCompile>
+    <ClCompile Include="input_slider.cpp">
+      <Filter>Файлы исходного кода\junk</Filter>
+    </ClCompile>
+    <ClCompile Include="math_lrs.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="lrs_view.cpp">
+      <Filter>Файлы исходного кода\fl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dlg.h">
+      <Filter>Файлы исходного кода\fl</Filter>
+    </ClInclude>
+    <ClInclude Include="int_input.h">
+      <Filter>Файлы исходного кода\fl</Filter>
+    </ClInclude>
+    <ClInclude Include="input_slider.h">
+      <Filter>Файлы исходного кода\junk</Filter>
+    </ClInclude>
+    <ClInclude Include="lrs_view.h">
+      <Filter>Файлы исходного кода\fl</Filter>
+    </ClInclude>
+    <ClInclude Include="math_lrs.h">
+      <Filter>Файлы исходного кода</Filter>
+    </ClInclude>
+    <ClInclude Include="lrs.h">
+      <Filter>Файлы исходного кода</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dlg.fl">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+  </ItemGroup>
+</Project>
